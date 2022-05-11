@@ -8,8 +8,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.concurrent.TimeUnit;
 
-public class CheckPhoneNumberTest {
-    public static void runCheckPhoneNumber() {
+public class CheckContacts {
+    public static void runCheckContacts() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
         options.addArguments("start-maximized");
@@ -20,14 +20,7 @@ public class CheckPhoneNumberTest {
 
         WebElement contacts = driver.findElement(By.cssSelector(".second-menu-wrap > ul > li:nth-child(10) > a"));
         contacts.click();
-        WebElement phoneText = driver.findElement(By.cssSelector("contacts-shops-tel"));
-        String phoneNumber = phoneText.getText();
-        String realPhoneNumber = ("Наш единый телефон: +7 (499) 745-00-44");
-        if (phoneNumber.equals(realPhoneNumber)){
-            System.out.println("номер телефона верный");
-        } else {
-            System.out.println("ошибка в номере телефона");
-        }
+
 
 
     }

@@ -8,8 +8,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.concurrent.TimeUnit;
 
-public class CheckWorkingHoursTest {
-    public static void runCheckWorkingHours() {
+public class CheckContacts2 {
+
+        public static void runCheckContacts2() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
         options.addArguments("start-maximized");

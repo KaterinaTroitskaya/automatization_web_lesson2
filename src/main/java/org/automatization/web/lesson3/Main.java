@@ -8,12 +8,12 @@ public class Main {
         WebDriverManager.chromedriver().setup();
         AuthorizationTest authorizationTest = new AuthorizationTest();
         authorizationTest.runAuthorization();
-        CheckPhoneNumberTest checkPhoneNumberTest = new CheckPhoneNumberTest();
-        checkPhoneNumberTest.runCheckPhoneNumber();
+        CheckContacts checkContacts = new CheckContacts();
+        checkContacts.runCheckContacts();
         LogOutTest logOutTest = new LogOutTest();
         logOutTest.runLogOutTest();
-        CheckWorkingHoursTest checkWorkingHoursTest = new CheckWorkingHoursTest();
-        checkWorkingHoursTest.runCheckWorkingHours();
+        CheckContacts2 checkContacts2 = new CheckContacts2();
+        checkContacts2.runCheckContacts2();
 
     }
 }
