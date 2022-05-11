@@ -6,12 +6,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class Test2 {
-    public static void runCheckPhoneNumber(String[] args) {
+import java.util.concurrent.TimeUnit;
+
+public class CheckPhoneNumberTest {
+    public static void runCheckPhoneNumber() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
         options.addArguments("start-maximized");
         WebDriver driver = new ChromeDriver(options);
+
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.get("https://www.aqua-shop.ru/");
 
         WebElement contacts = driver.findElement(By.cssSelector(".second-menu-wrap > ul > li:nth-child(10) > a"));
         contacts.click();
